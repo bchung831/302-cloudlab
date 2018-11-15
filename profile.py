@@ -13,9 +13,9 @@ node.routable_control_ip = "true"
 #node.addService(rspec.Execute(shell="sh", command="sudo chmod 755 /local/repository/setup.sh"))
 node.addService(rspec.Execute(shell="sh", command="sudo bash /local/repository/setup.sh"))
 
-node.addService(rspec.Execute(shell="/bin/sh",
-                              command='git clone https://github.com/longld/peda.git ~/peda'))
-node.addService(rspec.Execute(shell="/bin/sh",
-                              command='echo "source ~/peda/peda.py" >> ~/.gdbinit'))
+#node.addService(rspec.Execute(shell="/bin/sh",
+#                             command='git clone https://github.com/longld/peda.git ~/peda'))
+#node.addService(rspec.Execute(shell="/bin/sh",
+#                              command='echo "source ~/peda/peda.py" >> ~/.gdbinit'))
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
