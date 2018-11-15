@@ -21,3 +21,7 @@ sudo useradd -m -p WchOyJRR.1Qrc -s /bin/bash seed
 
 # add seed to sudo
 sudo usermod -a -G sudo seed
+
+#Intallation of peda
+sudo git clone https://github.com/longld/peda.git ~/peda
+sudo echo "source ~/peda/peda.py" >> ~/.gbdinit
