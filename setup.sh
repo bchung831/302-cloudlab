@@ -22,5 +22,6 @@ sudo useradd -m -p WchOyJRR.1Qrc -s /bin/bash seed
 sudo usermod -a -G sudo seed
 
 #Intallation of peda
-git clone https://github.com/longld/peda.git ~/peda
-echo "source ~/peda/peda.py" >> ~/.gbdinit
+sudo wget http://ropshell.com/peda/peda.tar.gz
+sudo tar zxvf peda.tar.gz
+sudo echo "source ~/peda/peda.py" >> ~/.gdbinit
