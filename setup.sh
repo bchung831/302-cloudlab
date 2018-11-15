@@ -28,4 +28,4 @@ sudo usermod -a -G sudo seed
 
 #setup gdb peda
 git clone https://github.com/longld/peda.git ~/peda
-sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit
+sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit"
