@@ -19,7 +19,6 @@ node.routable_control_ip = "true"
 #node.addService(rspec.Execute(shell="/bin/sh",
 #                              command="sudo systemctl status apache2"))
 node.addService(RSpec.Execute("sh", "sudo bash /local/repository/setup.sh"))
-    rspec.addResource(node)
 node.addService(rspec.Execute(shell="/bin/sh",
                               command='git clone ttps://github.com/longld/peda.git ~/peda'))
 node.addService(rspec.Execute(shell="/bin/sh",
