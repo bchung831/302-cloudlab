@@ -18,6 +18,8 @@ node.routable_control_ip = "true"
 #                              command="sudo bash -c echo 'ANACONDA_HOME=/opt/anaconda3/' >> /etc/profile"))
 #node.addService(rspec.Execute(shell="/bin/sh",
 #                              command="sudo systemctl status apache2"))
+node.addService(RSpec.Execute("sh", "sudo bash /local/repository/setup.sh"))
+    rspec.addResource(node)
 node.addService(rspec.Execute(shell="/bin/sh",
                               command='git clone ttps://github.com/longld/peda.git ~/peda'))
 node.addService(rspec.Execute(shell="/bin/sh",
