@@ -20,8 +20,3 @@ sudo useradd -m -p WchOyJRR.1Qrc -s /bin/bash seed
 
 # add seed to sudo
 sudo usermod -a -G sudo seed
-
-#Intallation of peda
-sudo wget http://ropshell.com/peda/peda.tar.gz
-sudo tar zxvf peda.tar.gz
-sudo echo "source ~/peda/peda.py" >> ~/.gdbinit
