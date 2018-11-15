@@ -11,11 +11,6 @@ sudo apt-get -y update
 #
 sudo apt-get -y install nmap
 
-#
-# open port 9090 and 9999 for all communications
-#
-sudo ufw allow 9090
-sudo ufw allow 9999
 
 #
 # setup Anaconda
