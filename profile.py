@@ -9,16 +9,10 @@ node = request.XenVM("node")
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
 node.routable_control_ip = "true"
 
+# Run the bash file to setup Anaconda
+node.addService(rspec.Execute(shell="sh", command="sudo chmod 755 /local/repository/setup.sh"))
+node.addService(rspec.Execute(shell="sh", command="sudo /local/repository/setup.sh"))
 
-#node.addService(rspec.Execute(shell="/bin/sh",
-#                             command="wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh"))
-#node.addService(rspec.Execute(shell="/bin/sh",
-#                              command="bash Anaconda3-5.2.0-Linux-x86_64.sh -b -p /opt/anaconda3"))
-#node.addService(rspec.Execute(shell="/bin/sh",
-#                              command="sudo bash -c echo 'ANACONDA_HOME=/opt/anaconda3/' >> /etc/profile"))
-#node.addService(rspec.Execute(shell="/bin/sh",
-#                              command="sudo systemctl status apache2"))
-node.addService(RSpec.Execute("sh", "sudo bash /local/repository/setup.sh"))
 node.addService(rspec.Execute(shell="/bin/sh",
                               command='git clone ttps://github.com/longld/peda.git ~/peda'))
 node.addService(rspec.Execute(shell="/bin/sh",
