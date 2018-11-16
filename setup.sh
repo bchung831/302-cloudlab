@@ -27,10 +27,5 @@ sudo useradd -m -p WchOyJRR.1Qrc -s /bin/bash seed
 sudo usermod -a -G sudo seed
 
 #setup gdb peda
-#git clone https://github.com/longld/peda.git ~/peda
-#sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit"
-
-#setup gdb peda V2
-wget http://ropshell.com/peda/peda.tar.gz
-sudo bash -c "tar zxvf peda.tar.gz"
-sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit
+sudo git clone https://github.com/longld/peda.git ~/peda
+sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit"
