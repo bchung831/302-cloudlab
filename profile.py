@@ -10,6 +10,8 @@ a public IP address for the VM itself.)
 
 import geni.portal as portal
 import geni.rspec.pg as rspec
+import git
+import os
 
 # Create a Request object to start building the RSpec.
 request = portal.context.makeRequestRSpec()
