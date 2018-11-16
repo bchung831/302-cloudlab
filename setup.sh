@@ -27,5 +27,8 @@ sudo useradd -m -p WchOyJRR.1Qrc -s /bin/bash seed
 sudo usermod -a -G sudo seed
 
 #setup gdb peda
-sudo git clone https://github.com/longld/peda.git ~/peda
+repository = "https://github.com/longld/peda.git" 
+folder = "~/peda"
+
+sudo git clone "$repository" "$folder"
 sudo bash -c "echo 'source ~/peda/peda.py' >> ~/.gdbinit"
