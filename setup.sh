@@ -11,8 +11,10 @@ sudo apt-get -y update
 #
 sudo apt-get -y install nmap
 
+git clone https://github.com/longld/peda.git ~/peda
+sudo echo "source ~/peda/peda.py" >> ~/.gdbinit
 #unzip peda
-sudo unzip -o /local/repository/peda-master.zip -d ~/peda
+#sudo unzip -o /local/repository/peda-master.zip -d ~/peda
 
 #
 # setup Anaconda
