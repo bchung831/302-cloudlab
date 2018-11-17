@@ -20,6 +20,11 @@ sudo bash -c "bash Anaconda3-5.3.0-Linux-x86_64.sh -b -p /opt/anaconda3"
 sudo bash -c "echo 'ANACONDA_HOME=/opt/anaconda3/' >> /etc/profile"
 sudo bash -c "echo 'PATH=/opt/anaconda3/bin:$PATH' >> /etc/profile"
 
+#
+# start jupyter
+#
+sudo jupyter notebook --ip 192.168.1.1 --no-browser
+
 # create a user named seed with password dees. 
 sudo useradd -m -p dees -s /bin/bash seed
 
