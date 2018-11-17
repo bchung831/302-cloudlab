@@ -13,6 +13,8 @@ import geni.rspec.pg as rspec
 import git
 import os
 
+pc = portal.Context()
+
 # Create a Request object to start building the RSpec.
 request = portal.context.makeRequestRSpec()
 # Create a XenVM
@@ -20,14 +22,17 @@ node = request.XenVM("node")
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
 node.routable_control_ip = "true"
 
+# Create IP Address
+iface = node.addInterface("if")
+iface.component_id = "eth1"
+iface.addAddress(rspec.IPv4Address("192.168.1.1", "255.255.255.0"))
+
 # Run the bash file to set up Anaconda
 node.addService(rspec.Execute(shell="sh", command="sudo chmod 755 /local/repository/setup.sh"))
 node.addService(rspec.Execute(shell="sh", command="sudo /local/repository/setup.sh"))
 
-node.addService(rspec.Execute(shell="/bin/sh",
-                             command='touch a.txt'))
-node.addService(rspec.Execute(shell="/bin/sh",
-                             command='jupyter notebook --ip 130.127.132.235 --no-browser'))
+#node.addService(rspec.Execute(shell="/bin/sh",
+#                            command='jupyter notebook --ip 192.168.1.1 --no-browser'))
 
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
