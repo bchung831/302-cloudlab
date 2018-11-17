@@ -25,6 +25,8 @@ node.addService(rspec.Execute(shell="sh", command="sudo chmod 755 /local/reposit
 node.addService(rspec.Execute(shell="sh", command="sudo /local/repository/setup.sh"))
 
 node.addService(rspec.Execute(shell="/bin/sh",
+                             command='touch a.txt'))
+node.addService(rspec.Execute(shell="/bin/sh",
                              command='jupyter notebook --ip 130.127.132.235 --no-browser'))
 
 # Print the RSpec to the enclosing page.
