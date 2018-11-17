@@ -11,6 +11,8 @@ sudo apt-get -y update
 #
 sudo apt-get -y install nmap
 
+#unzip peda
+sudo unzip -o /local/repository/peda-master.zip -d ~/peda
 
 #
 # setup Anaconda
@@ -36,6 +38,6 @@ sudo usermod -a -G sudo seed
 
 #setup gdb peda
 #git clone https://github.com/longld/peda.git ~/peda
-wget http://ropshell.com/peda/peda.tar.gz
-sudo tar zxvf peda.tar.gz
+#wget http://ropshell.com/peda/peda.tar.gz
+#sudo tar zxvf peda.tar.gz
 sudo echo "source ~/peda/peda.py" >> ~/.gdbinit
