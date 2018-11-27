@@ -40,8 +40,6 @@ sudo usermod -a -G sudo seed
 
 #setup gdb peda
 sudo git clone https://github.com/longld/peda.git /home/seed/peda
+sudo chown -R seed:seed /home/seed/peda
+sudo su seed -c "touch /home/seed/.gdbinit"
 sudo echo "source /home/seed/peda/peda.py" >> /home/seed/.gdbinit
-sudo chown seed peda.py
-#wget http://ropshell.com/peda/peda.tar.gz
-#sudo tar zxvf peda.tar.gz
-
