@@ -23,9 +23,9 @@ node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
 node.routable_control_ip = "true"
 
 # Create IP Address
-iface = node.addInterface("if")
-iface.component_id = "eth1"
-iface.addAddress(rspec.IPv4Address("192.168.1.1", "255.255.255.0"))
+#iface = node.addInterface("if")
+#iface.component_id = "eth1"
+#iface.addAddress(rspec.IPv4Address("192.168.1.1", "255.255.255.0"))
 
 # Run the bash file to set up Anaconda
 node.addService(rspec.Execute(shell="sh", command="sudo chmod 755 /local/repository/setup.sh"))
