@@ -39,8 +39,9 @@ sudo useradd -m -p seedubuntu -s /bin/bash root
 sudo usermod -a -G sudo seed
 
 #setup gdb peda
-git clone https://github.com/longld/peda.git ~/peda
-sudo echo "source ~/peda/peda.py" >> ~/.gdbinit
+sudo git clone https://github.com/longld/peda.git /home/seed/peda
+sudo echo "source /home/seed/peda/peda.py" >> /home/seed/.gdbinit
+sudo chown seed peda.py
 #wget http://ropshell.com/peda/peda.tar.gz
 #sudo tar zxvf peda.tar.gz
 
