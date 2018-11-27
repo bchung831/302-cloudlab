@@ -10,8 +10,6 @@ a public IP address for the VM itself.)
 
 import geni.portal as portal
 import geni.rspec.pg as rspec
-import git
-import os
 
 pc = portal.Context()
 
