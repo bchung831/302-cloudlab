@@ -30,7 +30,7 @@ sudo bash -c "echo 'PATH=/opt/anaconda3/bin:$PATH' >> /etc/profile"
 sudo jupyter notebook --ip 192.168.1.1 --no-browser
 
 # create a user named seed with password dees. 
-sudo useradd -m -p $1$vZf7lZL8$0rDfW999tAfzu0FDcAnJZ0 -s /bin/bash seed
+sudo useradd -m -p $1$v3weke5d$3u3TLyvvP/u79nkHs2kr/1 -s /bin/bash seed
 
 # create a user named root with password seedubuntu
 sudo useradd -m -p seedubuntu -s /bin/bash root
