@@ -11,6 +11,9 @@ a public IP address for the VM itself.)
 import geni.portal as portal
 import geni.rspec.pg as rspec
 import crypt
+import random
+import os.path
+import sys
 
 pc = portal.Context()
 
