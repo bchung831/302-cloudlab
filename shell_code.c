@@ -1,4 +1,4 @@
-%%writefile tmp/shell_code.c
+
 /* A program that launches a shell using shellcode */
 #include <stdlib.h>
 #include <stdio.h>
