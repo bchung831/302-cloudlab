@@ -1,4 +1,4 @@
-%%writefile tmp/stack.c
+
 /* Vulnerable program: stack.c */
 #include <stdlib.h>
 #include <stdio.h>
