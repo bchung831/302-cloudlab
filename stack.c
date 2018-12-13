@@ -19,4 +19,9 @@ int main(int argc, char **argv)
   bof(str);
   printf("Returned Properly\n");
   return 1;
+  
+  ##printf("%p\n", buffer);
+  printf("%s\n", buffer);
+
+  
 }
