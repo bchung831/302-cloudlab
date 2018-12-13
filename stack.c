@@ -8,6 +8,7 @@ int bof(char *str)
   char buffer[24];
   /* The following statement has a buffer overflow problem */
   strcpy(buffer, str); //Line 1
+   printf("%s\n", buffer);
   return 1;
 }
 int main(int argc, char **argv)
@@ -19,9 +20,6 @@ int main(int argc, char **argv)
   bof(str);
   printf("Returned Properly\n");
   return 1;
-  
-  ##printf("%p\n", buffer);
-  printf("%s\n", buffer);
-
+ 
   
 }
