@@ -7,13 +7,13 @@ void main()
   int fd;
   char *v[2];
 
-  /* Assume that /etc/zzz is an important system file,
+  /* Assume that /local/repository/zzz is an important system file,
    * and it is owned by root with permission 0644.
    * Before running this program, you should create
-   * the file /etc/zzz first. */
-  fd = open("/etc/zzz", O_RDWR | O_APPEND);
+   * the file /local/repository/zzz first. */
+  fd = open("/local/repository/zzz", O_RDWR | O_APPEND);
   if (fd == -1) {
-     printf("Cannot open /etc/zzz\n");
+     printf("Cannot open /local/repository/zzz\n");
      exit(0);
   }
 
